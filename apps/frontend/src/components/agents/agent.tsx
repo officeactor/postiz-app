@@ -259,8 +259,8 @@ const Threads: FC = () => {
           {data?.threads?.map((p: any) => (
             <Link
               className={clsx(
-                'overflow-ellipsis overflow-hidden whitespace-nowrap hover:bg-newBgColor px-[10px] py-[6px] rounded-[10px] cursor-pointer',
-                p.id === id && 'bg-newBgColor'
+                'overflow-ellipsis overflow-hidden whitespace-nowrap hover:bg-boxHover px-[10px] py-[6px] rounded-[10px] cursor-pointer',
+                p.id === id && 'bg-boxHover'
               )}
               href={`/agents/${p.id}`}
               key={p.id}

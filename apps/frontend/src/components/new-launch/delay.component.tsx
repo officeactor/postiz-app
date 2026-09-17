@@ -95,15 +95,15 @@ export const DelayComponent: FC<{
         <DelayIcon />
       </div>
       {isOpen && (
-        <div className="z-[300] absolute end-0 top-[100%] w-[200px] bg-newBgColorInner p-[8px] menu-shadow translate-y-[10px] flex flex-col rounded-[8px]">
+        <div className="z-[300] absolute end-0 top-[100%] w-[200px] bg-newBgColorInner p-[8px] menu-shadow translate-y-[10px] flex flex-col rounded-[8px] border border-tableBorder">
           <div className="grid grid-cols-4 gap-[4px]">
             {delayOptions.map((option) => (
               <div
                 onClick={() => handleSelectDelay(option.value)}
                 key={option.value}
                 className={clsx(
-                  'h-[32px] flex items-center justify-center rounded-[4px] cursor-pointer hover:bg-newBgColor text-[13px]',
-                  currentDelay === option.value && 'bg-[#612BD3] text-white hover:bg-[#612BD3]'
+                  'h-[32px] flex items-center justify-center rounded-[4px] cursor-pointer hover:bg-boxHover text-[13px]',
+                  currentDelay === option.value && 'bg-[#E91E63] text-white hover:bg-[#E91E63]'
                 )}
               >
                 {option.label}
@@ -120,8 +120,8 @@ export const DelayComponent: FC<{
                 onClick={(e) => e.stopPropagation()}
                 placeholder="Custom min"
                 className={clsx(
-                  'flex-1 w-full h-[32px] px-[8px] rounded-[4px] bg-newBgColor border text-[13px] outline-none focus:border-[#612BD3]',
-                  isCustomDelay ? 'border-[#612BD3]' : 'border-newTextColor/10'
+                  'flex-1 w-full h-[32px] px-[8px] rounded-[4px] bg-newBgColor border text-[13px] outline-none focus:border-[#E91E63]',
+                  isCustomDelay ? 'border-[#E91E63]' : 'border-newTextColor/10'
                 )}
               />
               <button
@@ -133,7 +133,7 @@ export const DelayComponent: FC<{
                     setCustomValue('');
                   }
                 }}
-                className="h-[32px] px-[10px] rounded-[4px] bg-[#612BD3] text-white text-[12px] font-[600] hover:bg-[#612BD3]/80"
+                className="h-[32px] px-[10px] rounded-[4px] bg-[#E91E63] text-white text-[12px] font-[600] hover:bg-[#E91E63]/80"
               >
                 Set
               </button>

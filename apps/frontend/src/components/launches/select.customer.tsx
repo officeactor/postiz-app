@@ -59,7 +59,7 @@ export const SelectCustomer: FC<{
         onClick={openClose}
         className={clsx(
           'relative z-[20] cursor-pointer h-[42px] rounded-[8px] pl-[16px] pr-[12px] gap-[8px] border flex items-center',
-          open ? 'border-[#612BD3]' : 'border-newColColor'
+          open ? 'border-[#E91E63]' : 'border-newColColor'
         )}
       >
         <div>
@@ -72,7 +72,7 @@ export const SelectCustomer: FC<{
       {open && (
         <div
           style={pos}
-          className="flex flex-col fixed pt-[12px] bg-newBgColorInner menu-shadow min-w-[250px]"
+          className="flex flex-col fixed pt-[12px] bg-newBgColorInner menu-shadow min-w-[250px] border border-tableBorder"
         >
           <div className="text-[14px] font-[600] px-[12px] mb-[5px]">
             {t('customers', 'Customers')}
@@ -92,7 +92,7 @@ export const SelectCustomer: FC<{
                   setCurrent('global')
                 }}
                 key={p.customer?.id}
-                className="p-[12px] hover:bg-newBgColor text-[14px] font-[500] h-[32px] flex items-center"
+                className="p-[12px] hover:bg-boxHover text-[14px] font-[500] h-[32px] flex items-center"
               >
                 {p.customer?.name}
               </div>
